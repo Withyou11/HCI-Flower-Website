@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Corner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/font/Segoe UI Bold.ttf">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Begin: Header -->
+    <header class="homepage_header">
+        <div class="grid wide homepage_header">
+            <div class="row">
+                <div class="header__img">
+                    <a href="" class="header__logo-link">
+                        <img class="header__img" src="./assets/img/logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="header__main">
+                    <h2 class="header__main-shop-name">Flower Make Your Day</h2>
+                    <div class="header__main-search">
+                        <input type="text" class="header__main-search-input"
+                            placeholder="Search product, code, style...">
+                        <button class="header__main-search-btn">
+                            <i class="header__main-search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="header__auth">
+                    <button class="header__auth-btn">Sign In</button>
+                </div>
+                <div class="header__cart">
+                    <i class="header__cart-icon ti-shopping-cart"></i>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </header>
+    <!-- End: Header -->
+
+    <!-- Begin: Tab -->
+    <div class="homepage_tabs">
+        <div class="tab__item active">SUBCRIPTIONS</div>
+        <div class="tab__item"> BIRTHDAY</div>
+        <div class="tab__item">GIFTBOX</div>
+        <div class="tab__item">LOVE</div>
+    </div>
+
+    <script>
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+
+        const tabs = $$('.tab__item');
+
+        tabs.forEach((tab, index) => {
+            tab.onclick = function () {
+                $('.tab__item.active').classList.remove('active');
+
+                this.classList.add('active');
+            }
+        })
+    </script>
+    <!-- End: Tab -->
+
+    <!-- Begin: Slider -->
+    <div class="grid wide">
+        <div class="slider__container">
+            <div class="homepage_slider fade">
+                <div class="slider__img1"></div>
+            </div>
+            <div class="homepage_slider fade">
+                <div class="slider__img2"></div>
+            </div>
+            <div class="homepage_slider fade">
+                <div class="slider__img3"></div>
+            </div>
+        </div>
+        <div class="slider__icon">
+            <span class="dot active_dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        let slides = $$('.homepage_slider');;
+        let dots = $$('.dot');;
+
+        dots.forEach((dot, index) => {
+            const slide_img = slides[index];
+
+            dot.onclick = function () {
+                for (i = 0; i < dots.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active_dot", "");
+                }
+                slides[index].style.display = "block";
+                dots[index].className += " active_dot";
+                slideIndex = index
+            }
+        })
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("homepage_slider");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active_dot", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active_dot";
+            setTimeout(showSlides, 4000);
+        }
+    </script>
+    <!-- End: Slider -->
+
+    <!-- Begin: Best Seller -->
+    <div class="grid wide">
+        <div class="best-seller_title">
+            OUR BEST SELLER
+        </div>
+        <div class="best-seller__control">
+            <div class="best-seller__item mr48">
+                <img class="best-seller__item-img" src="./assets/img/bestSeller_pic1.png"></img>
+                <div class="best-seller__item-des">
+                    PF26 - Gift From My Heart (Red) - Ribbon Hand Bouquet
+                </div>
+                <div class="best-seller__item-price">
+                    <div class="first-price">$59.99</div>
+                    <div class="real-price">$49.99</div>
+                </div>
+                <div class="best-seller__item-btn">
+                    <button class="btn_view-detail">View Detail</button>
+                </div>
+            </div>
+            <div class="best-seller__item">
+                <img class="best-seller__item-img" src="./assets/img/bestSeller_pic2.png"></img>
+                <div class="best-seller__item-des">
+                    PF28- Gift From My Heart (Yellow) - Ribbon Hand Bouquet
+                </div>
+                <div class="best-seller__item-price">
+                    <div class="first-price">$59.99</div>
+                    <div class="real-price">$49.99</div>
+                </div>
+                <div class="best-seller__item-btn">
+                    <button class="btn_view-detail">View Detail</button>
+                </div>
+            </div>
+            <div class="best-seller__item ml48">
+                <img class="best-seller__item-img" src="./assets/img/bestSeller_pic3.png"></img>
+                <div class="best-seller__item-des">
+                    SBSW033 - Winter Wonderland - Preserved Flower Bouquet
+                </div>
+                <div class="best-seller__item-price">
+                    <div class="first-price"></div>
+                    <div class="real-price">$39.99</div>
+                </div>
+                <div class="best-seller__item-btn">
+                    <button class="btn_view-detail">View Detail</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: Best Seller -->
+
+    <!-- Begin: Why choose us? -->
+    <div class="grid wide">
+        <div class="advantage">
+            <div class="advantage__title">WHY CHOOSE US?</div>
+            <div class="advantage__items">
+                <div class="advantage__item c-4">
+                    <img src="./assets/img/advantage_img-1.png" class="advantage__item-icon"></img>
+                    <div class="advantage__item-des">Free nominated-day delivery on all flowers
+                        and plants contact-free delivery.</div>
+                    <div class="vertical-line"></div>
+                </div>
+                <div class="advantage__item c-4">
+                    <img src="./assets/img/advantage_img-2.png" class="advantage__item-icon"></img>
+                    <div class="advantage__item-des">Sourced from trusted growers and with
+                        guaranteed freshness for five days.</div>
+                    <div class="vertical-line"></div>
+                </div>
+                <div class="advantage__item c-4">
+                    <img src="./assets/img/advantage_img-3 .png" class="advantage__item-icon"></img>
+                    <div class="advantage__item-des">Seven-day delivery service, with Sunday
+                        delivery available on selected bouquets.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: Why choose us? -->
+
+    <!-- Begin: What do you want? -->
+        <div class="grid wide">
+            <div class="WDYW">
+                <div class="WDYW__title">WHAT DO YOU WANT?</div>
+                <div class="WDYW__items">
+                    <div class="WDYW_item">
+                        <img src="./assets/img/want_pic1.png" alt="" class="WDYW_item-img">
+                        <div class="WDYW_item-name">All flowers</div>
+                    </div>
+                    <div class="WDYW_item">
+                        <img src="./assets/img/want_pic2.png" alt="" class="WDYW_item-img">
+                        <div class="WDYW_item-name">New in</div>
+                    </div>
+                    <div class="WDYW_item">
+                        <img src="./assets/img/want_pic3.png" alt="" class="WDYW_item-img">
+                        <div class="WDYW_item-name">Next day delivery</div>
+                    </div>
+                    <div class="WDYW_item">
+                        <img src="./assets/img/want_pic4.png" alt="" class="WDYW_item-img">
+                        <div class="WDYW_item-name">Birthday</div>
+                    </div>
+                    <div class="WDYW_item">
+                        <img src="./assets/img/want_pic5.png" alt="" class="WDYW_item-img">
+                        <div class="WDYW_item-name">Indoor</div>
+                    </div>
+                    <div class="WDYW_item">
+                        <img src="./assets/img/want_pic6.png" alt="" class="WDYW_item-img">
+                        <div class="WDYW_item-name">Decoration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- End: What do you want? -->
+
+    <!-- Begin: Ensurance -->
+        <div class="ensurance">
+            <div class="ensurance__img c-6">
+                <img class="ensurance__img-control" src="./assets/img/ensurance_pic.png" alt="">
+            </div>
+            <div class="ensurance_info c-6">
+                <div class="ensurance_info-title">How We Ensure The Best Flower Delivery</div>
+                <div class="ensurance_info-des">
+                    <div class="ensurance_item">
+                        <img src="./assets/img/ensurance_icon.png" class="ensurance_item-icon"></img>
+                        <div class="ensurance_item-text">The ONLY place to pick your own flowers</div>
+                    </div>
+                    <div class="ensurance_item">
+                        <img src="./assets/img/ensurance_icon.png" class="ensurance_item-icon"></img>
+                        <div class="ensurance_item-text">The ONLY cooled box on the market</div>
+                    </div>
+                    <div class="ensurance_item">
+                        <img src="./assets/img/ensurance_icon.png" class="ensurance_item-icon"></img>
+                        <div class="ensurance_item-text">The ONLY place to pick your own flowers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- End: Ensurance -->
+
+    <!-- Begin: Flower Subscription -->
+        <div class="subscribtion">
+            <div class="subscription__title">FLOWER SUBSCRIPTION</div>
+            <div class="subscription__subtitle">Our best deals</div>
+            <div class="subscription__detail">Up to 30% savings + free shipping on every subscription order. (Starting at just $40/month!)</div>
+            <div class="subscription__item-control">
+                <div class="subscription__item">
+                    <img src="./assets/img/subscription-item_pic.png" class="subscription__item-img"></img>
+                    <div class="subscription__item-title">Lorem Ipsum</div>
+                    <div class="subscription__item-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac dolor sit amet libero tempus feugiat nec nec arcu.</div>
+                </div>
+                <div class="subscription__item">
+                    <img src="./assets/img/subscription-item_pic.png" class="subscription__item-img"></img>
+                    <div class="subscription__item-title">Lorem Ipsum</div>
+                    <div class="subscription__item-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac dolor sit amet libero tempus feugiat nec nec arcu.</div>
+                </div>
+                <div class="subscription__item">
+                    <img src="./assets/img/subscription-item_pic.png" class="subscription__item-img"></img>
+                    <div class="subscription__item-title">Lorem Ipsum</div>
+                    <div class="subscription__item-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac dolor sit amet libero tempus feugiat nec nec arcu.</div>
+                </div>
+            </div>
+                <img src="./assets/img/subscription_pic.png" class="subscription__img"></img>
+        </div>
+    <!-- End: Flower Subscription -->
+
+    <!-- Begin: Footer -->
+    <div class="footer">
+        <div class="grid wide">
+            <div class="footer__control-1">
+                <div class="">
+                    <h4 class="footer__title">Help</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a class="footer__item-link" href="">Contact Us</a></li>
+                        <li class="footer__item"><a class="footer__item-link" href="">Track Your Order</a></li>
+                        <li class="footer__item"><a class="footer__item-link" href="">Sign Up</a></li>
+                        <li class="footer__item"><a class="footer__item-link" href="">Terms</a></li>
+                        <li class="footer__item"><a class="footer__item-link" href="">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="">
+                    <h4 class="footer__title">About us</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a class="footer__item-link" href="">Our Company</a></li>
+                        <li class="footer__item"><a class="footer__item-link" href="">Our Parent Company</a></li>
+                        <li class="footer__item"><a class="footer__item-link" href="">Our Brands</a></li>
+                        <li class="footer__item"><a class="footer__item-link" href="">Careers</a></li>
+                        <li class="footer__item"><a class="footer__item-link" href="">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="">
+                    <h4 class="footer__title">Services</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a class="footer__item-link" href="">Annual Catalog & Seasonal Catalogs</a></li>
+                        <li class="footer__item"><a class="footer__item-link" href="">Request for Catalog Corporate</a></li>
+                        <li class="footer__item"><a class="footer__item-link" href="">Corporate Flowers & Gifts</a></li>
+                        <li class="footer__item"><a class="footer__item-link" href="">FreshBlooms Flower Subscription</a></li>
+                        <li class="footer__item"><a class="footer__item-link" href="">Flower Workshops</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__control-2">
+                <div class="payment">
+                    <img src="./assets/img/footer_pic.png" class="payment__image" alt="Payment">
+                </div>
+                <p class="copyright">© 2022 - Bản quyền thuộc về Nhóm 2</p>
+            </div>
+        </div>
+    </div>
+    <!-- End: Footer -->
+</body>
+
+</html>
