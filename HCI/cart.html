@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/font/Segoe UI Bold.ttf">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Begin: Header -->
+    <header class="homepage_header">
+        <div class="grid wide homepage_header">
+            <div class="row">
+                <div class="header__img">
+                    <a href="main_page.html" class="header__logo-link">
+                        <img class="header__img" src="./assets/img/logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="header__main">
+                    <h2 class="header__main-shop-name">Flower Make Your Day</h2>
+                </div>
+                <div class="header__auth">
+                    <a href="sign_in.html">
+                        <button class="header__auth-btn">Tin Tran</button>
+                    </a>
+                </div>
+                <div class="header__cart">
+                    <i class="header__cart-icon ti-shopping-cart"></i>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </header>
+    <!-- End: Header -->
+    <!-- Begin: Tab -->
+    <div class="homepage_tabs">
+        <a href="main_page.html" class="tab__item active">Homepage</a>
+        <a href="identification.html" class="tab__item">Identification</a>
+        <a href="subscription.html" class="tab__item">Order periodically</a>
+        <a href="event_page.html" class="tab__item">Event</a>
+    </div>
+    <hr class="grid wide" style="margin-bottom: 4px;">
+    <!-- End: Tab -->
+    <div class="container">
+        <div class="grid wide">
+            <div class="row">
+                <div class="l-7 your_cart_container" style="margin-left: 10px;">
+                    <ul class="your_cart_list">
+                        <li class="row your_cart_item">
+                            <div class="l-3">
+                                <img width="60%" src="./assets/img/product.png" alt="">
+                            </div>
+                            <div class="l-8">
+                                <h4 class="cart_product-name">Stargazing</h4>
+                                <p class="cart_product-price">$78</p>
+                                <div class="quantity">
+                                    <button onclick="DecreaseNumber(event)"
+                                        class="quantity-button quantity-up">-</button>
+                                    <input class="quantity-content" type="number" id="num" min="0" max="10" value="1"
+                                        readonly />
+                                    <button onclick="IncreaseNumber(event)"
+                                        class="quantity-button quantity-down">+</button>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="l-1">
+                                <button onclick="Remove()" class="remove-button">x</button>
+                            </div>
+                        </li>
+                        <li class="row your_cart_item">
+                            <div class="l-3">
+                                <img width="60%" src="./assets/img/bestSeller_pic2.png" alt="">
+                            </div>
+                            <div class="l-8">
+                                <h4 class="cart_product-name">Summer by Starlight</h4>
+                                <p class="cart_product-price">$88</p>
+                                <div class="quantity">
+                                    <button onclick="DecreaseNumber(event)"
+                                        class="quantity-button quantity-up">-</button>
+                                    <input class="quantity-content" type="number" id="num" min="0" max="10" value="1"
+                                        readonly />
+                                    <button onclick="IncreaseNumber(event)"
+                                        class="quantity-button quantity-down">+</button>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="l-1">
+                                <button onclick="Remove()" class="remove-button">x</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="l-3 your_bill_container">
+                    <div class="bill_content">
+                        <p class="bill_text">Product:</p>
+                        <p class="bill_number">2</p>
+                    </div>
+                    <div class="bill_content">
+                        <p class="bill_text">Sub total:</p>
+                        <p class="bill_number">$166</p>
+                    </div>
+                    <div class="bill_content">
+                        <p class="bill_text">Discount:</p>
+                        <p class="bill_number">0</p>
+                    </div>
+                    <hr>
+                    <div class="bill_content">
+                        <p class="bill_text">Total:</p>
+                        <p class="bill_number">$166</p>
+                    </div>
+                    <div class="auth-form__control">
+                        <button class="btn btn__auth" style="margin-left: 22px; margin-bottom: 8px;">
+                            <a style="text-decoration: none; color: #fff;" href="personal.html">Order</a>
+                        </button>
+                        <button class="btn btn__auth" style="margin-left: 22px; margin-bottom: 8px; margin-top: 8px;">
+                            <a style="text-decoration: none; color: #fff;" href="personal.html">Order Monthly</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Begin: Footer -->
+    <div class="footer">
+        <div class="footer__control-1">
+            <div class="">
+                <h4 class="footer__title">Help</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__item-link" href="">Contact Us</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Track Your Order</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Sign Up</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Terms</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h4 class="footer__title">About us</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__item-link" href="">Our Company</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Our Parent Company</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Our Brands</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Careers</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Blog</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h4 class="footer__title">Services</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__item-link" href="">Annual Catalog & Seasonal Catalogs</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Request for Catalog Corporate</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Corporate Flowers & Gifts</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">FreshBlooms Flower Subscription</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Flower Workshops</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__control-2">
+            <div class="payment">
+                <img src="./assets/img/footer_pic.png" class="payment__image" alt="Payment">
+            </div>
+            <p class="copyright">© 2022 - Bản quyền thuộc về Nhóm 2</p>
+        </div>
+    </div>
+    <!-- End: Footer -->
+    <script>
+        function IncreaseNumber(e) {
+            var inputElement = e.target.parentElement.querySelector('.quantity-content')
+            var oldValue = parseFloat(inputElement.value);
+            oldValue += 1;
+            inputElement.value = oldValue
+        }
+        function DecreaseNumber(e) {
+            var inputElement = e.target.parentElement.querySelector('.quantity-content')
+            var oldValue = parseFloat(inputElement.value);
+            if (oldValue > 1) {
+                oldValue -= 1;
+                inputElement.value = oldValue
+            }
+        }
+    </script>
+</body>
+
+</html>

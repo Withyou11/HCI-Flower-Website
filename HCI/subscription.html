@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Corner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/font/Segoe UI Bold.ttf">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Begin: Header -->
+    <header class="homepage_header">
+        <div class="grid wide homepage_header">
+            <div class="row">
+                <div class="header__img">
+                    <a href="main_page.html" class="header__logo-link">
+                        <img class="header__img" src="./assets/img/logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="header__main">
+                    <h2 class="header__main-shop-name">Flower Make Your Day</h2>
+                    <div class="header__main-search">
+                        <input type="text" class="header__main-search-input"
+                            placeholder="Search product, code, style...">
+                        <button class="header__main-search-btn">
+                            <i class="header__main-search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="header__auth">
+                    <a href="sign_in.html">
+                        <button class="header__auth-btn">Tin Tran</button>
+                    </a>
+                </div>
+                <div class="header__cart">
+                    <a href="cart.html">
+                        <i class="header__cart-icon ti-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </header>
+    <!-- End: Header -->
+
+    <!-- Begin: Tab -->
+    <div class="homepage_tabs">
+        <a href="main_page.html" class="tab__item">Homepage</a>
+        <a href="identification.html" class="tab__item">Identification</a>
+        <a href="subscription.html" class="tab__item active">Order periodically</a>
+        <a href="event_page.html" class="tab__item">Event</a>
+    </div>
+    <hr class="grid wide">
+    <!-- End: Tab -->
+
+    <!-- Begin: ID -->
+    <div class="grid wide">
+        <div class="best-seller_title">
+            YOUR SUBSCRIPTIONS
+        </div>
+        <br>
+        <br>
+        <div class="l-11 your_cart_container" style="margin-left: 50px;">
+            <div class="row">
+                <div class="l-1" style="margin: 0 36px 0 24px;">
+                    <img style="margin-top: 14px;" width="120%" src="./assets/img/product.png" alt="">
+                </div>
+                <div class="l-6" style="margin-top: 16px;">
+                    <h4 style="font-size: 24px;" class="cart_product-name">Summer by Starlight</h4>
+                    <p class="cart_product-price">$50 / month</p>
+                    <div class="quantity">
+                        <input class="quantity-content" type="number" id="num" min="0" max="10" value="20" readonly
+                            style="border: 1px solid #FF7070;" />
+                    </div>
+                </div>
+                <div class="l-2" style="margin-top: 64px; margin-right: 2px;">
+                    <p style="font-size: 24px;">11/2022 - 3/2023</p>
+                </div>
+                <div class="l-1" style="background-color: #FF7070; margin: 0; padding: 19.5px 95px 19.5px 19.5px; height: 100px;">
+                    <img style="margin: 22px 52px; width: 60%;" src="./assets/img/check.png" alt="">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="l-11 your_cart_container" style="margin-left: 50px;">
+            <div class="row">
+                <div class="l-1" style="margin: 0 36px 0 24px;">
+                    <img style="margin-top: 14px;" width="120%" src="./assets/img/product.png" alt="">
+                </div>
+                <div class="l-6" style="margin-top: 16px;">
+                    <h4 style="font-size: 24px;" class="cart_product-name">Summer by Starlight</h4>
+                    <p class="cart_product-price">$50 / month </p>
+                    <div class="quantity">
+                        <input class="quantity-content" type="number" id="num" min="0" max="10" value="10" readonly
+                            style="border: 1px solid #FF7070;" />
+                    </div>
+                </div>
+                <div class="l-2" style="margin-top: 64px; margin-right: 2px;">
+                    <p style="font-size: 24px;">5/2022 - 7/2023</p>
+                </div>
+                <div class="l-1" style="background-color: #FF7070; margin: 0; padding: 19.5px 95px 19.5px 19.5px; height: 100px;">
+                    <img style="margin: 22px 52px; width: 60%;" src="./assets/img/check.png" alt="">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="l-11 your_cart_container" style="margin-left: 50px; opacity: 0.7;">
+            <div class="row">
+                <div class="l-1" style="margin: 0 36px 0 24px;">
+                    <img style="margin-top: 14px;" width="120%" src="./assets/img/product.png" alt="">
+                </div>
+                <div class="l-6" style="margin-top: 16px;">
+                    <h4 style="font-size: 24px;" class="cart_product-name">Summer by Starlight</h4>
+                    <p class="cart_product-price">$50 / month </p>
+                    <div class="quantity">
+                        <input class="quantity-content" type="number" id="num" min="0" max="10" value="30" readonly
+                            style="border: 1px solid #FF7070;" />
+                    </div>
+                </div>
+                <div class="l-2" style="margin-top: 64px; margin-right: 2px;">
+                    <p style="font-size: 24px;">1/2022 - 8/2022</p>
+                </div>
+                <div class="l-1" style="background-color: rgba(112, 112, 112, 0.6); margin: 0; padding: 19.5px 95px 19.5px 19.5px; height: 100px;">
+                    <img style="margin: 22px 52px; width: 70%;" src="./assets/img/times.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: ID -->
+    <!-- Begin: Footer -->
+    <div class="footer">
+        <div class="footer__control-1">
+            <div class="">
+                <h4 class="footer__title">Help</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__item-link" href="">Contact Us</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Track Your Order</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Sign Up</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Terms</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h4 class="footer__title">About us</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__item-link" href="">Our Company</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Our Parent Company</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Our Brands</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Careers</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Blog</a></li>
+                </ul>
+            </div>
+            <div class="">
+                <h4 class="footer__title">Services</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__item-link" href="">Annual Catalog & Seasonal Catalogs</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Request for Catalog Corporate</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Corporate Flowers & Gifts</a></li>
+                    <li class="footer__item"><a class="footer__item-link" href="">FreshBlooms Flower Subscription</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__item-link" href="">Flower Workshops</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__control-2">
+            <div class="payment">
+                <img src="./assets/img/footer_pic.png" class="payment__image" alt="Payment">
+            </div>
+            <p class="copyright">© 2022 - Bản quyền thuộc về Nhóm 2</p>
+        </div>
+    </div>
+    <!-- End: Footer -->
+</body>
+
+</html>
